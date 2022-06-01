@@ -1,0 +1,254 @@
+:root {
+    --color1: rgb(202, 143, 115);
+    --color2: rgb(82, 42, 0);
+    --color3: rgb(237, 208, 164);
+    --black: rgb(0, 0, 0);
+    --lightgray: rgb(170, 170, 170);
+    --white: rgb(255, 255, 255);
+}
+
+@font-face {
+    font-family: Goldman;
+    src: url(fonts/Goldman-Regular.ttf);
+}
+
+body {
+    max-width: 1024px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--color3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+main {
+    display: grid;
+    background-color: var(--color3);
+}
+
+h1 {
+    background-color: var(--color2);
+    justify-self: flex-start;
+    color: var(--color1);
+    font-family: Goldman;
+    font-size: 36px;
+}
+
+h2 {
+    background-color: var(--color2);
+    color: var(--color1);
+    font-family: Goldman;
+    font-size: 26px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+img {
+    justify-self: center;
+    align-items: center;
+    margin: 16px 0;
+}
+
+#main-beer-info>img {
+    width: 25%;
+}
+
+#main-landing>img {
+    width: 25%;
+}
+
+button,
+.default-button {
+    background-color: var(--white);
+    color: var(--color1);
+    border: 5px solid var(--black);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 900;
+    justify-self: center;
+    align-items: center;
+    cursor: pointer;
+    outline: none;  
+}
+
+#main-index a:active, button:active,
+.default-button:active {
+    outline: none;
+    transform: translateY(3px);
+}
+
+#main-index a {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: var(--white);
+    color: var(--color1);
+    border: 5px solid var(--black);
+    border-radius: 25px;
+    margin: 16px;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    outline: none;  
+}
+
+footer {
+    margin: 25px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color2);
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+header a {
+    color: var(--color1);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    background-color: var(--color2);
+    list-style: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+li>ul {
+    background-color: var(--color2);
+    padding: 2px;
+}
+
+li {
+    background-color: var(--color1);
+    color: var(--black);
+    padding: 5px;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+#main-search li {
+    cursor: pointer;
+}
+
+form {
+    background-color: var(--color2);
+    display: grid;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+form>label {
+    background-color: var(--color1);
+    margin: 5px 0 0 0;
+    font-weight: 900;
+}
+
+form>input {
+    background-color: var(--lightgray);
+    ;
+    color: var(--black);
+    margin: 5px 0 0 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+nav>button {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav>span {
+    color: var(--color1);
+    font-weight: 900;
+    margin: 0 10%;
+}
+
+.inactive {
+    visibility: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    #main-beer-info {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    #main-beer-info>ul {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #main-beer-info>img {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: center;
+        width: 35%;
+    }
+
+    #main-beer-info>form {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #main-beer-info>nav {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    #main-search {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #main-search>form {
+        margin: 8px;
+    }
+
+    #main-search>ul {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 8px;
+    }
+
+    #main-search>nav {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        margin: 8px;
+    }
+
+    #main-landing>img {
+        width: 10%;
+    }
+
+}	

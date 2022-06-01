@@ -1,0 +1,8 @@
+Att göra:
+Mystiska error på rad 0 som är null
+
+Görs nu:
+
+
+Färdigt:
+Att göra lista

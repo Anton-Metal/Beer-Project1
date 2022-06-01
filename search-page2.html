@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="search-page2.js" defer></script>
+    <link rel="stylesheet" href="beer.css">
+    <title>Sök efter öl</title>
+</head>
+<body>
+
+    <h1>Sök efter öl</h1>
+
+    <main id="main-search">
+        <form>
+            <label for="search-input">Namn:</label>
+            <input type="text" name="search-input">
+            <label for="hops-input">Humlesort:</label>
+            <input type="text" name="hops-input">
+            <label for="malt-input">Maltsort:</label>
+            <input type="text" name="malt-input">
+            <label for="brewed-after-input">Bryggd tidigast (MM-YYYY):</label>
+            <input type="text" name="brewed-after-input">
+            <label for="brewed-before-input">Bryggd senast (MM-YYYY):</label>
+            <input type="text" name="brewed-before-input">
+            <label for="abv-greater">Alkoholhalt från:</label>
+            <input type="text" name="abv-greater">
+            <label for="abv-less">Alkoholhalt till:</label>
+            <input type="text" name="abv-less">
+            
+            <input class="default-button" type="submit" value="Sök">       
+        </form>
+        <ul></ul>
+        <nav></nav>
+    </main>
+
+</body>
+</html>
